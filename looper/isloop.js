@@ -2,8 +2,20 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    let runnerOne = linkedlist.head
+    let runnerTwo = linkedlist.head.next
+    return loopRecursion(runnerOne, runnerTwo);
+}
 
-};
+const loopRecursion = (runnerOne, runnerTwo) => {
+    if(runnerOne.value === runnerTwo.value){
+        return true
+    } else if(!runnerTwo.next.next){
+        return false
+    } else {
+        return loopRecursion(runnerOne.next, runnerTwo.next.next)
+    }
+}
 
 
 /*
