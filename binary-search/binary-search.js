@@ -14,17 +14,6 @@ const binarySearch = (array, target) => {
 			return false
 		}
 	}
-	// let i = 0
-	// let j = array.length-1
-	// while( i <= j && array.length > 1 ){
-	// 	if (array[i] === target || array[j] === target){
-	// 		return true
-	// 	} else {
-	// 		i++
-	// 		j--
-	// 	}
-	// }
-	// return false
 	let median = Math.floor(array.length/2)
 	if(array[median]===target){
 		return true
