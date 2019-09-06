@@ -8,13 +8,13 @@ const minJumps = arr => {
     let maxSum = 0;
     let currentSum = 0;
     let correctIdx = 0;
-        if (start >= arr.length-1){ //if we get to the end from the start value
-            return numJumps
+        if (start >= arr.length-1){ 
+            return numJumps //if we get to the end from the start value
         }
-        for(let i = 0; i <= start; i++){ // if we get to the end based off jumping to the next number after start
+        for(let i = 0; i <= start; i++){ 
             if(i+arr[i] >= arr.length-1){ 
                 numJumps++
-                return numJumps
+                return numJumps // if we get to the end based off jumping to the next number after start
             } else {
                 currentSum = i+arr[i]
                 if (maxSum < currentSum){
