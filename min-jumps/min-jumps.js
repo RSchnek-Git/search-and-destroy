@@ -12,14 +12,14 @@ const minJumps = arr => {
             return numJumps
         }
         for(let i = 0; i <= start; i++){ // if we get to the end based off jumping to the next number after start
-            if(i+arr[i] >= arr.length-1){ //if maxSum < currentSum, idx = i USE THIS
+            if(i+arr[i] >= arr.length-1){ 
                 numJumps++
                 return numJumps
             } else {
                 currentSum = i+arr[i]
                 if (maxSum < currentSum){
                     maxSum = currentSum
-                    correctIdx = i
+                    correctIdx = i //if maxSum < currentSum, idx = the "i" where this max sum happened
                 }
             }
         }
